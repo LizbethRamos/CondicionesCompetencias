@@ -1,19 +1,10 @@
 
 package condicionescompetencias;
-
 public class CondicionesCompetencias extends javax.swing.JFrame {
 
     public CondicionesCompetencias() {
         initComponents();
-        rc = new RCompartido();
-        t1 = new Hilo(Area1, rc);
-        t1.setName("Perrito 1");
-        t2 = new Hilo(Area2, rc);
-        t2.setName("Perrito 2");
-        t3 = new Hilo(Area3, rc);
-        t3.setName("Perrito 3");
-        t4 = new Hilo(Area4, rc);
-        t4.setName("Perrito 4");
+        rc = new RCompartido();       
     }
 
     
@@ -21,9 +12,9 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        bCorrer = new javax.swing.JButton();
+        bPausar = new javax.swing.JButton();
+        bParar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Area1 = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -32,23 +23,34 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
         Area3 = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         Area4 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        plato1 = new javax.swing.JLabel();
+        plato2 = new javax.swing.JLabel();
+        plato3 = new javax.swing.JLabel();
+        plato4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 153, 255));
 
-        jButton1.setText("Correr");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bCorrer.setText("Correr");
+        bCorrer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bCorrerActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Pausar");
+        bPausar.setText("Pausar");
+        bPausar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPausarActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Parar");
+        bParar.setText("Parar");
+        bParar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPararActionPerformed(evt);
+            }
+        });
 
         Area1.setColumns(20);
         Area1.setRows(5);
@@ -66,13 +68,13 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
         Area4.setRows(5);
         jScrollPane4.setViewportView(Area4);
 
-        jLabel1.setText("Plato 1");
+        plato1.setText("Plato 1");
 
-        jLabel2.setText("Plato 2");
+        plato2.setText("Plato 2");
 
-        jLabel3.setText("Plato 3");
+        plato3.setText("Plato 3");
 
-        jLabel4.setText("Plato 4");
+        plato4.setText("Plato 4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,28 +83,28 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(bParar)
+                    .addComponent(bCorrer)
+                    .addComponent(bPausar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(114, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(129, 129, 129)
-                .addComponent(jLabel2)
-                .addGap(112, 112, 112)
-                .addComponent(jLabel3)
-                .addGap(107, 107, 107)
-                .addComponent(jLabel4)
-                .addGap(65, 65, 65))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(plato1)
+                .addGap(123, 123, 123)
+                .addComponent(plato2)
+                .addGap(104, 104, 104)
+                .addComponent(plato3)
+                .addGap(105, 105, 105)
+                .addComponent(plato4)
+                .addGap(55, 55, 55))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,18 +112,18 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(62, 62, 62)
-                        .addComponent(jButton1)
+                        .addComponent(bCorrer)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(bPausar)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3))
+                        .addComponent(bParar))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                            .addComponent(plato1)
+                            .addComponent(plato2)
+                            .addComponent(plato3)
+                            .addComponent(plato4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,12 +137,46 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void bCorrerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCorrerActionPerformed
+        
+        h1 = new Hilo(Area1, rc);
+        h2 = new Hilo(Area2, rc);
+        h3 = new Hilo(Area3, rc);
+        h4 = new Hilo(Area4, rc);
+        h1.setName("Perrito 1");
+        h2.setName("Perrito 2");
+        h3.setName("Perrito 3");
+        h4.setName("Perrito 4"); 
+        h1.start();
+        h2.start();
+        h3.start();
+        h4.start();
+        bCorrer.setEnabled(false);
+    }//GEN-LAST:event_bCorrerActionPerformed
+
+    private void bPausarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPausarActionPerformed
+        if(bPausar.getText().equals("Pausar")){
+            bPausar.setText("Continuar");
+            h1.pausar();
+            h2.pausar();
+            h3.pausar();
+            h4.pausar();
+        }else{
+            bPausar.setText("Pausar");
+            h1.continuar();
+            h2.continuar();
+            h3.continuar();
+            h4.continuar();
+        }
+    }//GEN-LAST:event_bPausarActionPerformed
+
+    private void bPararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPararActionPerformed
+        h1.parar();
+        h2.parar();
+        h3.parar();
+        h4.parar();
+        bCorrer.setEnabled(true);
+    }//GEN-LAST:event_bPararActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,18 +218,18 @@ public class CondicionesCompetencias extends javax.swing.JFrame {
     private javax.swing.JTextArea Area2;
     private javax.swing.JTextArea Area3;
     private javax.swing.JTextArea Area4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton bCorrer;
+    private javax.swing.JButton bParar;
+    private javax.swing.JButton bPausar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel plato1;
+    private javax.swing.JLabel plato2;
+    private javax.swing.JLabel plato3;
+    private javax.swing.JLabel plato4;
     // End of variables declaration//GEN-END:variables
-    private Hilo t1, t2, t3, t4;
+    private Hilo h1, h2, h3, h4;
     private RCompartido rc;
 }
